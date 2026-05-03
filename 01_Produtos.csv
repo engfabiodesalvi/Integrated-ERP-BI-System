@@ -1,0 +1,201 @@
+ID_Produto,Descricao_Produto,Preco_Unitario_Venda,Estoque_Minimo
+PROD001,Monitor 24 pol Full HD,850.00,10
+PROD002,Teclado Mecanico RGB,350.00,15
+PROD003,Mouse Sem Fio Optico,120.00,30
+PROD004,Cadeira Ergonomica Office,1200.00,5
+PROD005,Notebook i5 8GB 256GB SSD,3500.00,8
+PROD006,Notebook i7 16GB 512GB SSD,5500.00,4
+PROD007,Impressora Laser Color,1800.00,3
+PROD008,Toner Preto High Yield,250.00,20
+PROD009,Cabo HDMI 2.0 2m,45.00,50
+PROD010,SSD 480GB SATA3,320.00,25
+PROD011,Memoria RAM 8GB DDR4,280.00,15
+PROD012,Webcam 1080p Business,450.00,12
+PROD013,Headset com Microfone,180.00,20
+PROD014,Roteador Wi-Fi 6,650.00,10
+PROD015,Switch 24 Portas Giga,1200.00,5
+PROD016,Filtro de Linha 6 Tomadas,55.00,40
+PROD017,Adaptador USB-C para HDMI,130.00,15
+PROD018,HD Externo 1TB,380.00,10
+PROD019,Suporte para Monitor Articulado,220.00,8
+PROD020,Estabilizador 1000VA,400.00,6
+PROD021,Pacote Office Business Anual,599.00,100
+PROD022,Licenca Windows 11 Pro,980.00,100
+PROD023,Antivirus Endpoint 1 Ano,150.00,200
+PROD024,Assinatura Adobe CC Anual,2400.00,50
+PROD025,Software de Backup Cloud,85.00,100
+PROD026,Mousepad Gamer Extra Large,85.00,25
+PROD027,Hub USB 3.0 4 Portas,75.00,30
+PROD028,Cabo de Rede Cat6 3m,25.00,60
+PROD029,Caneta Digital para Tablet,320.00,10
+PROD030,Mochila para Notebook 15.6,250.00,15
+PROD031,Nobreak 1500VA Biz,1450.00,4
+PROD032,Base Resfriadora Notebook,110.00,20
+PROD033,Pendrive 64GB USB 3.1,65.00,50
+PROD034,Projetor Multimidia 4K,4200.00,2
+PROD035,Tela de Projecao 100 pol,600.00,3
+PROD036,Mini PC Industrial i3,2100.00,5
+PROD037,Placa de Video 4GB,1400.00,6
+PROD038,Cooler Processador Universal,145.00,15
+PROD039,Pasta Termica High Silver,40.00,25
+PROD040,Bateria de CMOS CR2032,5.00,100
+PROD041,Cartao de Memoria 128GB,140.00,30
+PROD042,Docking Station Universal,890.00,7
+PROD043,Kit Limpeza Telas,22.00,50
+PROD044,Caixa de Som 2.0 USB,95.00,20
+PROD045,Microfone de Mesa USB,280.00,10
+PROD046,Organizador de Cabos Spiral,15.00,100
+PROD047,Etiquetadora Termica,420.00,8
+PROD048,Fita para Etiquetadora,55.00,40
+PROD049,Scanner de Documentos,1550.00,4
+PROD050,Leitor de Codigo de Barras,230.00,15
+PROD051,Papel A4 Report 500fls,28.00,100
+PROD052,Clips Metalicos 33mm 100un,6.50,200
+PROD053,Grampeador Ate 20 fls,35.00,30
+PROD054,Caixa de Grampos 26/6,8.00,150
+PROD055,Pasta Suspensa Kraft 10un,42.00,80
+PROD056,Envelope Pardo A4 50un,25.00,120
+PROD057,Caneta Esferografica Azul,1.50,500
+PROD058,Caneta Esferografica Preta,1.50,500
+PROD059,Lapiseira 0.7mm,12.00,100
+PROD060,Grafite 0.7mm HB,5.00,150
+PROD061,Borracha Branca Escolar,2.50,150
+PROD062,Regua 30cm Acrilico,4.50,100
+PROD063,Tesoura Multiuso,18.00,50
+PROD064,Cola em Bastao 40g,14.00,60
+PROD065,Fita Adesiva Transp 45x40,12.00,90
+PROD066,Calculadora Cientifica,95.00,20
+PROD067,Marcador de Texto Amarelo,4.50,200
+PROD068,Quadro Branco 90x60,180.00,5
+PROD069,Apagador para Quadro,15.00,30
+PROD070,Marcador para Quadro Azul,7.50,100
+PROD071,Bloco Auto-Adesivo 76x76,8.50,250
+PROD072,Agenda Diaria Executiva,45.00,40
+PROD073,Cracha de Identificacao,2.50,300
+PROD074,Cordao para Cracha,3.50,300
+PROD075,Suporte de Pasta Acrilico,38.00,15
+PROD076,Fragmentadora de Papel,750.00,4
+PROD077,Lixeira de Escritorio 10L,28.00,20
+PROD078,Porta Canetas Telado,15.00,35
+PROD079,Maleta para Documentos,65.00,12
+PROD080,Quadro de Avisos Cortica,110.00,6
+PROD081,Servidor Rack 1U,12500.00,2
+PROD082,HD SAS 600GB 15K,1800.00,10
+PROD083,Memoria Server 32GB ECC,1450.00,8
+PROD084,Placa de Rede Fibra 10G,950.00,5
+PROD085,Cabo Optico Patch Cord 3m,85.00,30
+PROD086,Transceiver SFP+ 10G,320.00,20
+PROD087,Patch Panel 24 Portas,450.00,10
+PROD088,Guia de Cabos Horizontal,65.00,15
+PROD089,Rack de Parede 9U,850.00,4
+PROD090,Bandeja Fixa para Rack,140.00,10
+PROD091,Unidade LTO-8 Backup,28000.00,1
+PROD092,Fita LTO-8 Ultrium,950.00,20
+PROD093,KVM Switch 4 Portas,1200.00,3
+PROD094,Exaustor para Rack,220.00,8
+PROD095,Controladora RAID PCIe,2100.00,4
+PROD096,Sensor de Temperatura IP,650.00,6
+PROD097,Câmera IP PoE Dome,480.00,15
+PROD098,Gravador NVR 8 Canais,1550.00,4
+PROD099,HD SkyHawk 4TB (CFTV),750.00,10
+PROD100,Injetor PoE Gigabit,180.00,15
+PROD101,Monitor 27 pol 4K,2200.00,6
+PROD102,Teclado Wireless Logi,290.00,20
+PROD103,Mouse Gamer 12000 DPI,240.00,25
+PROD104,Suporte Notebook Articulado,185.00,15
+PROD105,Notebook i3 8GB SSD,2600.00,10
+PROD106,MacBook Air M2 13p,9500.00,3
+PROD107,Impressora Termica Cupom,680.00,10
+PROD108,Toner Colorido (Kit 4),1200.00,5
+PROD109,Cabo DisplayPort 1.4,75.00,30
+PROD110,SSD M.2 NVMe 1TB,580.00,20
+PROD111,Memoria Notebook 16GB,420.00,15
+PROD112,Webcam 4K Streaming,1100.00,5
+PROD113,Headphone Bluetooth NoiseC,950.00,8
+PROD114,Access Point Corporativo,1450.00,7
+PROD115,Switch Poe 8 Portas,980.00,6
+PROD116,Protetor Eletronico 8 Tom,85.00,30
+PROD117,Adaptador Wi-Fi USB 5G,95.00,40
+PROD118,Case para HD Externo 2.5,55.00,25
+PROD119,Suporte CPU com Rodas,75.00,20
+PROD120,Conversor de Midia Fibra,320.00,10
+PROD121,Licenca SQL Server Standard,15000.00,2
+PROD122,Windows Server 2022 CAL,180.00,50
+PROD123,Assinatura Zoom Business,950.00,20
+PROD124,Ferramenta BI Assinatura,250.00,40
+PROD125,Licenca Firewall Sophos,3200.00,5
+PROD126,Mouse Ergonomico Vertical,280.00,12
+PROD127,Hub USB-C 7 em 1,350.00,15
+PROD128,Cabo de Rede Cat5e 5m,18.00,80
+PROD129,Mesa Digitalizadora Media,650.00,6
+PROD130,Maleta Rigida Notebook,380.00,10
+PROD131,Bateria Nobreak 12V 7Ah,145.00,20
+PROD132,Cooler para Gabinete 120mm,45.00,40
+PROD133,Pendrive 128GB Metal,110.00,30
+PROD134,Suporte Projetor Teto,155.00,8
+PROD135,Ponteira Laser Apresentador,120.00,20
+PROD136,Gabinete ATX Mid Tower,350.00,10
+PROD137,Fonte ATX 600W 80 Plus,450.00,12
+PROD138,Placa Mae B550M,850.00,8
+PROD139,SSD Externo Portatil 500GB,480.00,10
+PROD140,Leitor Cartao de Memoria,45.00,20
+PROD141,Filtro Privacidade 14pol,190.00,15
+PROD142,Trava de Seguranca Note,85.00,30
+PROD143,Spray Limpa Contatos,35.00,40
+PROD144,Ar Comprimido Limpeza,55.00,30
+PROD145,Pulseira Antiestatica,25.00,20
+PROD146,Alicate de Crimpagem RJ45,85.00,10
+PROD147,Testador de Cabo de Rede,65.00,10
+PROD148,Decapador de Cabos,35.00,15
+PROD149,Multimetro Digital,145.00,8
+PROD150,Lanterna de Led Inspeção,55.00,12
+PROD151,Papel Fotografico A4 20fls,45.00,50
+PROD152,Bloco de Notas Espiral,12.00,100
+PROD153,Tesoura de Picotar,25.00,15
+PROD154,Estilete Largo Profissional,18.00,40
+PROD155,Lâmina Estilete 10un,12.00,50
+PROD156,Perfurador 2 Furos 40fls,85.00,12
+PROD157,Fita Dupla Face 3M,28.00,60
+PROD158,Extrator de Grampos,7.00,100
+PROD159,Elastico de Borracha 100g,12.00,80
+PROD160,Alfinete para Quadro 50un,9.00,120
+PROD161,Prancheta Oficio Madeira,15.00,40
+PROD162,Organizador de Mesa Acril,55.00,20
+PROD163,Porta Recados Aramado,18.00,30
+PROD164,Carimbo Datador Autom,65.00,10
+PROD165,Almofada para Carimbo,18.00,25
+PROD166,Tinta para Carimbo 30ml,12.00,40
+PROD167,Pasta L Transparente 10un,18.00,100
+PROD168,Pasta Catalogo 50 Envelopes,45.00,40
+PROD169,Arquivo Morto Papelao,12.00,150
+PROD170,Caixa Organizadora 20L,55.00,30
+PROD171,Calculadora de Mesa 12 Dig,65.00,25
+PROD172,Grampeador de Tapeceiro,120.00,5
+PROD173,Fita para Empacotamento,15.00,100
+PROD174,Filme Stretch Manual 50cm,65.00,40
+PROD175,Plastico Bolha 1.2x50m,110.00,10
+PROD176,Envelope Bolha A4 10un,35.00,50
+PROD177,Estante de Aco 6 Prateiras,280.00,5
+PROD178,Armario de Aco 2 Portas,850.00,3
+PROD179,Mesa de Reuniao 2.0m,1800.00,2
+PROD180,Gaveteiro 3 Gavetas,450.00,6
+PROD181,Servidor Tower i3 16GB,6500.00,3
+PROD182,Fonte Redundante 750W,1850.00,5
+PROD183,Placa de Rede Quad Port,1200.00,4
+PROD184,Cabo Serial Console,45.00,20
+PROD185,PDU Básica 12 Tomadas,380.00,10
+PROD186,KVM Console Gaveta 17,6800.00,2
+PROD187,Trilho para Servidor Univ,250.00,8
+PROD188,Chassis para Media Conv,1550.00,3
+PROD189,Switch Core Layer 3,22000.00,1
+PROD190,Firewall Hardware Mid,8500.00,2
+PROD191,Antena Wi-Fi High Gain,145.00,15
+PROD192,Protetor Surto Coaxial,85.00,20
+PROD193,Mini Rack 6U Parede,450.00,6
+PROD194,Patch Cord Cat6a 2m,35.00,50
+PROD195,Terminador Optico,120.00,20
+PROD196,Kit Chaves Precisao,95.00,15
+PROD197,Soprador Térmico 1800W,280.00,5
+PROD198,Ferro de Solda 40W,55.00,12
+PROD199,Sugador de Solda,25.00,20
+PROD200,Estacao de Solda Prof,1200.00,3
