@@ -41,10 +41,11 @@ ID do Produto
 )
 
 Descrição do Produto
-=SE(
-  $O$7="Desbloqueado",
-  "PROD"&TEXTO(ALEATÓRIOENTRE(1,200),"000"),
-  [@[ID Produto]]
+=PROCX(
+  [@[ID Produto]],
+  Tabela_Produtos[ID_Produto],
+  Tabela_Produtos[Descricao_Produto],
+  "Produto não encontrado"
 )
 
 Quantidade
