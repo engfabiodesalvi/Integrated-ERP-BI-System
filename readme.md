@@ -8,7 +8,7 @@ Este projeto simula o ciclo completo de operações administrativas, financeiras
 
 O projeto foi construído sob o princípio da **normalização de dados**, garantindo que informações de Clientes, Fornecedores e Produtos fossem relacionadas através de chaves primárias (IDs), evitando redundância.
 
-### 1. Camada de Simulação e Geração de Dados (DB_Movimentação)
+### Camada de Simulação e Geração de Dados (DB_Movimentação)
 
 Diferente de planilhas estáticas, este projeto utiliza lógica de programação em Excel para simular 1000 transações baseadas em regras de negócio.
 
