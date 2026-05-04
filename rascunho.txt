@@ -112,7 +112,7 @@ Entradas
 =SOMASES(Tabela_Movimentacao_Geral[Quantidade],Tabela_Movimentacao_Geral[ID Produto],CONTROLE_ESTOQUE!$A2,Tabela_Movimentacao_Geral[Tipo Fluxo], "Entrada")
 
 Saídas
-=SOMASES(Tabela_Movimentacao_Geral[Quantidade], Tabela_Movimentacao_Geral[ID Produto],CONTROLE_ESTOQUE!$A2,Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida
+=SOMASES(Tabela_Movimentacao_Geral[Quantidade], Tabela_Movimentacao_Geral[ID Produto],CONTROLE_ESTOQUE!$A2,Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida")
 
 Saldo Atual
 =CONTROLE_ESTOQUE!$D2 - CONTROLE_ESTOQUE!$E2
@@ -149,3 +149,15 @@ Contas a Receber
 
 Total Saida
 =SOMA(Dashboard2[@[Faturamento]:[Contas a Receber]])
+
+Rótulo Grafico de Rosca para o Fluxo de Caixa
+=SE(CALCULUS!$A$11="Saida","Fluxo de Caixa (Saída)", SE(CALCULUS!$A$11="Entrada", "Fluxo de Caixa (Entrada)", "Fluxo de Caixa (Total)"))
+
+Rótulo do gráfico de Barras Verticais para o Monitoramento de Pedidos e Entregas
+=SE(CALCULUS!$A$11="Saida","Monitoramento de Pedidos e Entregas (Saídas)", SE(CALCULUS!$A$11="Entrada", "Monitoramento de Pedidos e Entregas (Entradas)","Monitoramento de Pedidos e Entregas (Total)"))
+
+Rótulo do Grafico de Linha para a Evolução do Faturamento Mensal
+=SE(CALCULUS!$A$11="Saida","Evolução do Faturamento Mensal (Saídas)", SE(CALCULUS!$A$11="Entrada", "Evolução do Faturamento Mensal (Entradas)","Evolução do Faturamento Mensal (Total)"))
+
+Rótulo do gráfico de Barras Horizontais do Ranking de Receita por Produto
+=SE(CALCULUS!$A$11="Saida","Ranking de Receita por Produto (Saídas)", SE(CALCULUS!$A$11="Entrada", "Ranking de Receita por Produto (Entradas)", "Ranking de Receita por Produto (Total)"))
