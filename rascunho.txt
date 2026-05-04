@@ -1,3 +1,151 @@
+Tabela DB_Movimentação
+
 Gerar uma coluna com datas aleatorias em ordem crescente
 =CLASSIFICAR(MATRIZALEATÓRIA(1000,1,$B$21,HOJE(),VERDADEIRO))
 
+ID da Transação
+="T"&TEXTO(LIN(A22)-1,"0000")
+
+Tipo fluxo
+=SE($O$7="Desbloqueado",
+  LET(
+    saldo_atual, SOMA(($C$2:$C21="Entrada")*($F$2:$F21=[@[ID Produto]])*($H$2:$H21) - ($C$2:$C21="Saida")*($F$2:$F21=[@[ID Produto]])*($H$2:$H21)),
+    SE(saldo_atual > 0, SE(ALEATÓRIOENTRE(0,10)>3,"Saida","Entrada"), "Entrada")
+  ),
+  [@[Tipo Fluxo]]
+)
+
+ID da Entidade
+=SE(
+   $O$7="Desbloqueado",
+   SE(
+     [@[Tipo Fluxo]]="Saida",
+     "CLI"&TEXTO(ALEATÓRIOENTRE(1,20),"000"),
+     "FORN"&TEXTO(ALEATÓRIOENTRE(1,20),"000")
+   ),
+   [@[ID Entidade]]
+)
+
+Mome da Entidade
+=SE(
+  [@[Tipo Fluxo]]="Saida",
+  PROCX([@[ID Entidade]], Tabela_Clientes[ID_Cliente], Tabela_Clientes[Nome_Cliente], "Cliente não encontrado"),
+  PROCX([@[ID Entidade]], Tabela_Fornecedores[ID_Fornecedor], Tabela_Fornecedores[Nome_Fantasia], "Fornecedor não encontrado")
+)
+
+ID do Produto
+=SE(
+  $O$7="Desbloqueado",
+  "PROD"&TEXTO(ALEATÓRIOENTRE(1,200),"000"),
+  [@[ID Produto]]
+)
+
+Descrição do Produto
+=SE(
+  $O$7="Desbloqueado",
+  "PROD"&TEXTO(ALEATÓRIOENTRE(1,200),"000"),
+  [@[ID Produto]]
+)
+
+Quantidade
+=SE(
+   $O$7="Desbloqueado",
+   LET(
+     saldo_atual, SOMA(($C$2:$C21="Entrada")*($F$2:$F21=[@[ID Produto]])*($H$2:$H21) - ($C$2:$C21="Saida")*($F$2:$F21=[@[ID Produto]])*($H$2:$H21)),
+       estoque_minimo, PROCX([@[ID Produto]], Tabela_Produtos[ID_Produto], Tabela_Produtos[Estoque_Minimo], 0),
+     SE(
+       saldo_atual > estoque_minimo,
+       SE(
+         [@[Tipo Fluxo]]="Saida",
+         ALEATÓRIOENTRE(1, saldo_atual),
+         ALEATÓRIOENTRE(1, 100)
+       ),
+       SE(
+         [@[Tipo Fluxo]]="Saida",
+         ALEATÓRIOENTRE(1, saldo_atual),
+         SE(
+           saldo_atual < 0,
+           ABS(saldo_atual) + estoque_minimo + ALEATÓRIOENTRE(1, 100),
+           estoque_minimo - saldo_atual + ALEATÓRIOENTRE(1, 100)
+         )
+       )
+     )
+   ),
+   [@Quantidade]
+)
+
+Valor Unitário
+=PROCX([@[ID Produto]], Tabela_Produtos[ID_Produto],Tabela_Produtos[Preco_Unitario_Venda])
+
+Valor Total
+=[@Quantidade] * [@[Valor Unitário]]
+
+Status Financeiro
+=SE(
+   $O$7="Desbloqueado",
+   ESCOLHER(ALEATÓRIOENTRE(1,3),"Pago","Pendente","Atrasado"),
+   [@[Status Financeiro]]
+)
+
+Status Logistico
+=SE(
+   $O$7="Desbloqueado",
+   ESCOLHER(ALEATÓRIOENTRE(1,3),"Entregue","Em Rota","Aguardando"),
+   [@[Status Logistico]]
+)
+
+Previsão de Entrega
+=SE(
+  $O$7="Desbloqueado",
+  SE(
+    [@[Tipo Fluxo]]="Entrada",
+    [@Data] + PROCX([@[ID Entidade]],Tabela_Fornecedores[ID_Fornecedor],Tabela_Fornecedores[Lead_Time]),
+    "N/A"
+  ),
+  [@[Previsão de Entrega]]
+)
+
+
+Tabela Controle de Estoque
+
+Entradas
+=SOMASES(Tabela_Movimentacao_Geral[Quantidade],Tabela_Movimentacao_Geral[ID Produto],CONTROLE_ESTOQUE!$A2,Tabela_Movimentacao_Geral[Tipo Fluxo], "Entrada")
+
+Saídas
+=SOMASES(Tabela_Movimentacao_Geral[Quantidade], Tabela_Movimentacao_Geral[ID Produto],CONTROLE_ESTOQUE!$A2,Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida
+
+Saldo Atual
+=CONTROLE_ESTOQUE!$D2 - CONTROLE_ESTOQUE!$E2
+
+Status de Reposição
+=SE(CONTROLE_ESTOQUE!$F2 < CONTROLE_ESTOQUE!$C2, "COMPRAR URGENTE", "Estoque OK")
+
+
+Tabela Fluxo de Saida de Caixa
+
+Faturamento
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total],Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida", Tabela_Movimentacao_Geral[Status Financeiro], "Pago")
+
+Inadiplência
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total], Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida", Tabela_Movimentacao_Geral[Status Financeiro], "Atrasado")
+
+Contas a Receber
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total], Tabela_Movimentacao_Geral[Tipo Fluxo], "Saida", Tabela_Movimentacao_Geral[Status Financeiro], "Pendente")
+
+Total Saida
+=SOMA(Dashboard[@[Faturamento ]:[Contas a Receber]])
+
+
+Tabela Fluxo de Saida de Caixa
+
+Faturamento
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total],Tabela_Movimentacao_Geral[Tipo Fluxo], "Entrada", Tabela_Movimentacao_Geral[Status Financeiro], "Pago")
+
+Inadiplência
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total], Tabela_Movimentacao_Geral[Tipo Fluxo], "Entrada", Tabela_Movimentacao_Geral[Status Financeiro], "Atrasado")
+
+Contas a Receber
+=SOMASES(Tabela_Movimentacao_Geral[Valor Total], Tabela_Movimentacao_Geral[Tipo Fluxo], "Entrada", Tabela_Movimentacao_Geral[Status Financeiro], "Pendente")
+
+Total Saida
+=SOMA(Dashboard2[@[Faturamento]:[Contas a Receber]])
